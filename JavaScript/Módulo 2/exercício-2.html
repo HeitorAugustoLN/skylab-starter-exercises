@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heitor Augusto</title>
+    <style>
+      .quadrado {
+        background-color: red;
+        height: 100px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="gerarQuadrado()">Criar quadrado</button>
+    <script>
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
+      function gerarQuadrado() {
+        var newColor = getRandomColor();
+        var quadrado = document.createElement("div");
+        quadrado.setAttribute("class", "quadrado");
+        document.body.appendChild(quadrado);
+        quadrado.style.backgroundColor = newColor;
+      }
+    </script>
+  </body>
+</html>
