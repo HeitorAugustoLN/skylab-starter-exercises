@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-do App</title>
-    <link rel="stylesheet" href="material.css" />
     <style>
       #to-do {
         margin-top: 12px;
@@ -21,19 +20,17 @@
       }
     </style>
   </head>
-  <body class="mat-body">
+  <body>
     <h1 class="mat-h1">Tasks</h1>
-    <ul class="mat-list-base" id="todo"></ul>
+    <ul id="todo"></ul>
 
-    <div id="adder" class="mat-divider">
+    <div id="adder">
       <input
         type="text"
-        class="mat-input-element"
         id="addInput"
         placeholder="Put the task name"
-        cl
       />
-      <button class="mat-button" id="addButton" onclick="addTodo()">Add</button>
+      <button id="addButton" onclick="addTodo()">Add</button>
     </div>
     <script src="app.js"></script>
   </body>
