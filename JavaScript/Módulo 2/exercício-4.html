@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 4</title>
+  </head>
+  <body>
+    Seu nome: <input type="text" id="nome" /> <br />
+    <button onclick="adicionar()">Adicionar</button>
+
+    <h2>Nomes</h2>
+    <ul class="lista"></ul>
+
+    <script>
+      const createElement = (str) => {
+        const el = document.createElement("div");
+        el.innerHTML = str;
+        return el.firstElementChild;
+      };
+
+      function adicionar() {
+        const nome = document.querySelector("input[id=nome]");
+        const lista = document.querySelector("ul[class=lista]");
+
+        const nomeCriado = createElement(`<li>${nome.value}</li>`);
+        lista.appendChild(nomeCriado);
+
+        nome.focus();
+      }
+    </script>
+  </body>
+</html>
