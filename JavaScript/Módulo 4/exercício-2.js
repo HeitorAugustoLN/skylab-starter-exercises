@@ -33,7 +33,7 @@ function adicionarUsuario() {
         listaDeRepositorioElement.appendChild(repositoryInList);
       }
     })
-    .catch(function (error) {
+    .catch(function () {
       const errorMessage = createElement(
         `<h2 class="error">Usuário não encontrado!</h2>`
       );
